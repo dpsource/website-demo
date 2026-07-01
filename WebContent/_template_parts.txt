@@ -1,0 +1,1 @@
+Ovaj fajl ne ubacujes u projekt. Samo je podsjetnik: MySQL connector .jar ubaci rucno u WebContent/WEB-INF/lib.

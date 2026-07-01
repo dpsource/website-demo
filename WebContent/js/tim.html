@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Madrid - Tim</title>
+<link rel="stylesheet" href="css/style-common.css">
+<style>
+  .team-hero {
+    background: linear-gradient(135deg, #001a3a 0%, #004797 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 40px;
+    border-bottom: 4px solid #fcc000;
+  }
+  .team-hero h2 { color: #fcc000; font-size: 2.2em; margin: 0 0 8px; }
+  .team-hero p  { opacity: .8; margin: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/250px-Real_Madrid_CF.svg.png" alt="Real Madrid Logo">
+    <h1>Real Madrid CF</h1>
+  </div>
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Početna</a></li>
+      <li><a href="oklubu.html">O klubu</a></li>
+      <li><a href="tim.html">Tim</a></li>
+      <li><a href="trofeji.html">Trofeji</a></li>
+      <li><a href="stadion.html">Stadion</a></li>
+      <li class="admin-only"><a href="admin.html">Admin tabla</a></li>
+      <li class="login-only"><a href="#" onclick="openLoginModal();return false;">Login</a></li>
+      <li class="login-only"><a href="#" onclick="openRegisterModal();return false;">Register</a></li>
+      <li class="logged-only"><a href="logout">Logout</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<div class="team-hero">
+  <h2>⚽ Tim sezone 2024/25</h2>
+  <p>Klikni na igrača za statistiku iz baze</p>
+</div>
+
+<section class="section">
+
+  <h3 class="position-title">🧤 Golmani</h3>
+  <div class="players">
+    <div class="player" onclick="openPlayer(1)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20COURTOIS_EQUIPO_CARITA_380x501%20%E2%80%93%201?$Desktop$&fit=wrap&wid=288&hei=384" alt="Courtois">
+      <h3>Thibaut Courtois</h3>
+      <p>Golman 🇧🇪 | #1</p>
+    </div>
+    <div class="player" onclick="openPlayer(2)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20LUNIN_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Lunin">
+      <h3>Andriy Lunin</h3>
+      <p>Golman 🇺🇦 | #13</p>
+    </div>
+  </div>
+
+  <h3 class="position-title">🛡️ Odbrana</h3>
+  <div class="players">
+    <div class="player" onclick="openPlayer(3)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20CARVAJAL_EQUIPO_CARITA_380x501%20%E2%80%93%206?$Desktop$&fit=wrap&wid=288&hei=384" alt="Carvajal">
+      <h3>Carvajal</h3>
+      <p>Desni bek 🇪🇸 | #2</p>
+    </div>
+    <div class="player" onclick="openPlayer(4)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20MILITAO_EQUIPO_CARITA_380x501%20%E2%80%93%2013?$Desktop$&fit=wrap&wid=288&hei=384" alt="Militão">
+      <h3>É. Militão</h3>
+      <p>Stoper 🇧🇷 | #3</p>
+    </div>
+    <div class="player" onclick="openPlayer(5)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20ALABA_EQUIPO_CARITA_380x501%20%E2%80%93%201?$Desktop$&fit=wrap&wid=288&hei=384" alt="Alaba">
+      <h3>Alaba</h3>
+      <p>Lijevi bek 🇦🇹 | #4</p>
+    </div>
+    <div class="player" onclick="openPlayer(6)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20TRENT_EQUIPO_CARITA_380x501%20v2?$Desktop$&fit=wrap&wid=288&hei=384" alt="Trent">
+      <h3>Trent A-Arnold</h3>
+      <p>Desni bek 🇬🇧 | #12</p>
+    </div>
+    <div class="player" onclick="openPlayer(7)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20ASENCIO_EQUIPO_CARITA_380x501%20%E2%80%93%203?$Desktop$&fit=wrap&wid=288&hei=384" alt="Asensio">
+      <h3>Asensio</h3>
+      <p>Krilni napadač 🇪🇸 | #7</p>
+    </div>
+    <div class="player" onclick="openPlayer(8)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20CARRERAS_EQUIPO_CARITA_380x501%20%E2%80%93%202?$Desktop$&fit=wrap&wid=288&hei=384" alt="Carreras">
+      <h3>Á. Carreras</h3>
+      <p>Stoper 🇪🇸 | #27</p>
+    </div>
+    <div class="player" onclick="openPlayer(9)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20FRAN_GARCIA_EQUIPO_CARITA_380x501%20%E2%80%93%201?$Desktop$&fit=wrap&wid=288&hei=384" alt="Fran García">
+      <h3>Fran García</h3>
+      <p>Lijevi bek 🇪🇸 | #20</p>
+    </div>
+    <div class="player" onclick="openPlayer(10)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20RUDIGUER_EQUIPO_CARITA_380x501%20%E2%80%93%202?$Desktop$&fit=wrap&wid=288&hei=384" alt="Rüdiger">
+      <h3>Rüdiger</h3>
+      <p>Stoper 🇩🇪 | #22</p>
+    </div>
+    <div class="player" onclick="openPlayer(11)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20MENDY_EQUIPO_CARITA_380x501%20%E2%80%93%201?$Desktop$&fit=wrap&wid=288&hei=384" alt="Mendy">
+      <h3>Mendy</h3>
+      <p>Lijevi bek 🇫🇷 | #23</p>
+    </div>
+    <div class="player" onclick="openPlayer(12)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20HUIJSEN_EQUIPO_CARITA_380x501%20%E2%80%93%201?$Desktop$&fit=wrap&wid=288&hei=384" alt="Huijsen">
+      <h3>Huijsen</h3>
+      <p>Stoper 🇳🇱 | #6</p>
+    </div>
+  </div>
+
+  <h3 class="position-title">🔄 Vezni red</h3>
+  <div class="players">
+    <div class="player" onclick="openPlayer(13)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20BELLINGHAM_EQUIPO_CARITA_380x501%20%E2%80%93%201?$Desktop$&fit=wrap&wid=288&hei=384" alt="Bellingham">
+      <h3>Bellingham</h3>
+      <p>Središnji vezni 🇬🇧 | #5</p>
+    </div>
+    <div class="player" onclick="openPlayer(14)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20CAMAVINGA_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Camavinga">
+      <h3>Camavinga</h3>
+      <p>Defenzivni vezni 🇫🇷 | #6</p>
+    </div>
+    <div class="player" onclick="openPlayer(15)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20VALVERDE_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Valverde">
+      <h3>Valverde</h3>
+      <p>Središnji vezni 🇺🇾 | #8</p>
+    </div>
+    <div class="player" onclick="openPlayer(16)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20TCHOUAMENI_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Tchouaméni">
+      <h3>Tchouaméni</h3>
+      <p>Defenzivni vezni 🇫🇷 | #14</p>
+    </div>
+    <div class="player" onclick="openPlayer(17)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20ARDA_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Güler">
+      <h3>Arda Güler</h3>
+      <p>Središnji vezni 🇹🇷 | #15</p>
+    </div>
+    <div class="player" onclick="openPlayer(18)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20CEBALLOS_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Ceballos">
+      <h3>D. Ceballos</h3>
+      <p>Ofenzivni vezni 🇪🇸 | #19</p>
+    </div>
+  </div>
+
+  <h3 class="position-title">⚡ Napadači</h3>
+  <div class="players">
+    <div class="player" onclick="openPlayer(19)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20VINI_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Vini Jr.">
+      <h3>Vinícius Jr.</h3>
+      <p>Krilni napadač 🇧🇷 | #7</p>
+    </div>
+    <div class="player" onclick="openPlayer(20)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20MBAPPE_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Mbappé">
+      <h3>Kylian Mbappé</h3>
+      <p>Centarfor 🇫🇷 | #9</p>
+    </div>
+    <div class="player" onclick="openPlayer(21)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20RODRYGO_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Rodrygo">
+      <h3>Rodrygo</h3>
+      <p>Krilni napadač 🇧🇷 | #11</p>
+    </div>
+    <div class="player" onclick="openPlayer(22)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20GONZALO_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Gonzalo">
+      <h3>Gonzalo García</h3>
+      <p>Centarfor 🇪🇸 | #32</p>
+    </div>
+    <div class="player" onclick="openPlayer(23)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20BRAHIM_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Brahim">
+      <h3>Brahim Díaz</h3>
+      <p>Krilni napadač 🇲🇦 | #21</p>
+    </div>
+    <div class="player" onclick="openPlayer(24)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/2025%20Mastantuono_EQUIPO_CARITA_380x501?$Desktop$&fit=wrap&wid=288&hei=384" alt="Mastantuono">
+      <h3>Mastantuono</h3>
+      <p>Centarfor 🇦🇷 | #10</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Real Madrid Fan Projekt | Napravio: Dario Pavljasevic</p>
+</footer>
+
+<!-- MODALI -->
+<div id="loginModal" class="modal">
+  <div class="modal-content modal-small">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2 class="modal-title">🔐 Login</h2>
+    <form onsubmit="loginSubmit(event)">
+      <input class="form-field" type="text" name="username" placeholder="Username" required>
+      <input class="form-field" type="password" name="password" placeholder="Password" required>
+      <button class="btn" type="submit" style="width:100%;margin-top:12px;">Prijavi se</button>
+      <div id="loginMsg" class="message"></div>
+    </form>
+  </div>
+</div>
+<div id="registerModal" class="modal">
+  <div class="modal-content modal-small">
+    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+    <h2 class="modal-title">📝 Registracija</h2>
+    <form onsubmit="registerSubmit(event)">
+      <input class="form-field" type="text" name="username" placeholder="Username" minlength="3" required>
+      <p class="form-hint">Minimalno 3 znaka</p>
+      <input class="form-field" type="password" name="password" placeholder="Password" minlength="4" required>
+      <p class="form-hint">Minimalno 4 znaka</p>
+      <button class="btn" type="submit" style="width:100%;margin-top:12px;">Registruj se</button>
+      <div id="registerMsg" class="message"></div>
+    </form>
+  </div>
+</div>
+<div id="playerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('playerModal')">&times;</span>
+    <div id="playerModalBody"></div>
+  </div>
+</div>
+<div id="trophyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('trophyModal')">&times;</span>
+    <div id="trophyModalBody"></div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

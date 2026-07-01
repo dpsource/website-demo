@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid - Hala Madrid!</title>
+    <link rel="stylesheet" href="css/style-common.css">
+    <style>
+        .club-event {
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        .event-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .event-image,
+        .event-text {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .event-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .event-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .event-text h3 {
+            color: #001d59;
+        }
+
+        @media (max-width: 768px) {
+            .event-row {
+                flex-direction: column;
+            }
+            .event-image,
+            .event-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/250px-Real_Madrid_CF.svg.png" alt="Real Madrid Logo">
+        <h1>Real Madrid CF</h1>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="oklubu.html">O klubu</a></li>
+            <li><a href="tim.html">Tim</a></li>
+            <li><a href="trofeji.html">Trofeji</a></li>
+            <li><a href="stadion.html">Stadion</a></li>
+            <li class="admin-only"><a href="admin.html">Admin tabla</a></li>
+            <li class="login-only"><a href="#" onclick="openLoginModal();return false;">Prijava</a></li>
+            <li class="login-only"><a href="#" onclick="openRegisterModal();return false;">Registracija</a></li>
+            <li class="logged-only"><a href="logout">Odjava</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+</header>
+
+<!-- OSNIVANJE KLUBA -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Real_Madrid_players_in_1902-1908.jpg" alt="Prvi tim Real Madrida">
+        </div>
+        <div class="event-text">
+            <h3>Osnivanje Kluba (1902.)</h3>
+            <p>
+                Klub je osnovan 6. ožujka 1902. godine u Madridu. Skupina entuzijasta i ljubitelja nogometa željela je stvoriti klub koji će promicati nogomet u gradu.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- OTVARANJE STADIONA -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-text">
+            <h3>Otvaranje stadiona Santiago Bernabéu (1947.)</h3>
+            <p>
+                Novi stadion omogućio je klubu da prima veći broj gledatelja. Bernabéu je postao simbol kluba i domaćin mnogih legendarnih utakmica.
+            </p>
+        </div>
+        <div class="event-image">
+            <img src="https://preview.redd.it/gzfka6brkzv51.jpg?width=640&crop=smart&auto=webp&s=d601b2d7bbc9da504e35ffa083adc45242eaaf9f" alt="Stadion Santiago Bernabéu">
+        </div>
+    </div>
+</section>
+
+<!-- ZLATNA ERA -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-image">
+            <img src="https://editorial.uefa.com/resources/025d-0f4e7c96c709-753c8bbd042c-1000/real_madrid_v_stade_reims.jpeg" alt="Alfredo Di Stéfano">
+        </div>
+        <div class="event-text">
+            <h3>Zlatna era s Di Stéfanom (1950-e)</h3>
+            <p>
+                Klub je dominirao španjolskim i europskim natjecanjima. Osvojili su prvih 5 uzastopnih UEFA Champions League naslova (1956.–1960.) pod vođstvom Alfreda Di Stéfana.
+            </p>
+            <p>
+                Tijekom ove ere Real je postao globalna nogometna sila.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- GALÁCTICOS -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-text">
+            <h3>Epoha Galácticos (2000.–2006.)</h3>
+            <p>
+                Klub je doveo globalne zvijezde poput Zidanea, Figa, Beckhama i Ronalda. Cilj je bio kombinirati sportski uspjeh i globalnu prepoznatljivost.
+            </p>
+        </div>
+        <div class="event-image">
+            <img src="https://static01.nyt.com/athletic/uploads/wp/2023/05/05105630/GettyImages-51805395-scaled.jpg" alt="Zidane Galácticos">
+        </div>
+    </div>
+</section>
+
+<!-- LA DÉCIMA 2014. -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-image">
+            <img src="https://s.yimg.com/os/en_US/Sports/AP_Soccer/201405241730630585803-p5.jpg" alt="La Décima Celebration">
+        </div>
+        <div class="event-text">
+            <h3>Povijesna 2014. godina</h3>
+            <p>
+                Real Madrid osvaja svoju desetu UEFA Champions League titulu (La Décima). Zidane i Ramos igraju ključnu ulogu u povijesnom trenutku.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- MODERNA ERA -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-text">
+            <h3>Moderna era i novi uspjesi (2016.–2023.)</h3>
+            <p>
+                Klub osvaja četiri Lige prvaka u pet godina, pod vodstvom Zidanea kao trenera. Fokus na mlade talente poput Viníciusa Jr. i Judea Bellinghama, uz veterane poput Modrića i Benzeme.
+            </p>
+        </div>
+        <div class="event-image">
+            <img src="https://assets.goal.com/images/v3/blt981e23ca5fc03d2e/real_madrid_champions_league_champions_2022_23.jpg" alt="Moderna era Real Madrida">
+        </div>
+    </div>
+</section>
+
+<!-- GLOBALNI UTJECAJ -->
+<section class="club-event">
+    <div class="event-row">
+        <div class="event-image">
+            <img src="https://pictures.tribuna.com/image/abf46121-de88-453b-9ca9-950a2128f22d?width=1920&quality=70" alt="Navijači Real Madrida">
+        </div>
+        <div class="event-text">
+            <h3>Utjecaj na globalnu kulturu</h3>
+            <p>
+                Real Madrid postaje simbol elegancije, strasti i nogometnog majstorstva. Klub ima milijune navijača diljem svijeta, a igrači kluba često postaju globalne ikone.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Real Madrid Fan Projekt | Napravio: Dario Pavljasevic</p>
+</footer>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content modal-small">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2 class="modal-title">Prijava</h2>
+        <form onsubmit="loginSubmit(event)">
+            <input class="form-field" type="text" name="username" placeholder="Korisničko ime" minlength="3" required>
+      <p class="form-hint">Minimalno 3 znaka</p>
+            <input class="form-field" type="password" name="password" placeholder="Lozinka" required>
+            <button class="btn" type="submit">Prijavi se</button>
+            <div id="loginMsg" class="message"></div>
+        </form>
+    </div>
+</div>
+<div id="registerModal" class="modal">
+    <div class="modal-content modal-small">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h2 class="modal-title">Registracija</h2>
+        <form onsubmit="registerSubmit(event)">
+            <input class="form-field" type="text" name="username" placeholder="Korisničko ime" minlength="3" required>
+      <p class="form-hint">Minimalno 3 znaka</p>
+            <input class="form-field" type="password" name="password" placeholder="Lozinka" minlength="4" required>
+      <p class="form-hint">Minimalno 4 znaka</p>
+      <button class="btn" type="submit" style="width:100%;margin-top:12px;">Registruj se</button>
+            <div id="registerMsg" class="message"></div>
+        </form>
+    </div>
+</div>
+<div id="playerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('playerModal')">&times;</span>
+        <div id="playerModalBody"></div>
+    </div>
+</div>
+<div id="trophyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('trophyModal')">&times;</span>
+        <div id="trophyModalBody"></div>
+    </div>
+</div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

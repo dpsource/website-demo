@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Madrid - Trofeji</title>
+<link rel="stylesheet" href="css/style-common.css">
+<style>
+  .trophy-hero {
+    background: linear-gradient(135deg, #001a3a 0%, #004797 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 40px;
+    border-bottom: 4px solid #fcc000;
+  }
+  .trophy-hero h2 { color: #fcc000; font-size: 2.2em; margin: 0 0 8px; }
+  .trophy-hero p  { opacity: .8; margin: 0; }
+
+  /* Highlight champion trofej */
+  .trophy.featured {
+    border-top-color: #004797;
+    background: linear-gradient(135deg, #001a3a, #004797);
+    color: white;
+  }
+  .trophy.featured h2, .trophy.featured h3 { color: #fcc000; }
+  .trophy.featured p { color: rgba(255,255,255,.75); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/250px-Real_Madrid_CF.svg.png" alt="Real Madrid Logo">
+    <h1>Real Madrid CF</h1>
+  </div>
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Početna</a></li>
+      <li><a href="oklubu.html">O klubu</a></li>
+      <li><a href="tim.html">Tim</a></li>
+      <li><a href="trofeji.html">Trofeji</a></li>
+      <li><a href="stadion.html">Stadion</a></li>
+      <li class="admin-only"><a href="admin.html">Admin tabla</a></li>
+      <li class="login-only"><a href="#" onclick="openLoginModal();return false;">Login</a></li>
+      <li class="login-only"><a href="#" onclick="openRegisterModal();return false;">Register</a></li>
+      <li class="logged-only"><a href="logout">Logout</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<div class="trophy-hero">
+  <h2>🏆 Zbirka trofeja</h2>
+  <p>Klikni na trofej za više detalja i sezone osvajanja</p>
+</div>
+
+<section class="section">
+  <h2>Naslovi Real Madrida</h2>
+  <div class="gold-divider"></div>
+
+  <div class="trophy-grid">
+
+    <div class="trophy card-click featured" onclick="openTrophy(1)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/champions?$Desktop$&fit=wrap" alt="Champions League">
+      <h2>Champions League</h2>
+      <p>🏆 15 naslova</p>
+    </div>
+
+    <div class="trophy card-click featured" onclick="openTrophy(2)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/Liga-1?$Desktop$&fit=wrap" alt="La Liga">
+      <h2>La Liga</h2>
+      <p>🏆 36 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(3)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/CopaRey?$Desktop$&fit=wrap" alt="Copa del Rey">
+      <h3>Copa del Rey</h3>
+      <p>🏆 20 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(4)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/MundialClubes?$Desktop$&fit=wrap" alt="FIFA Club World Cup">
+      <h3>Club World Cup</h3>
+      <p>🏆 9 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(5)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/SupercopaEuropa?$Desktop$&fit=wrap" alt="European Super Cup">
+      <h3>European Super Cup</h3>
+      <p>🏆 6 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(6)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/SupercopaEspana?$Desktop$&fit=wrap" alt="Spanish Super Cup">
+      <h3>Spanish Super Cup</h3>
+      <p>🏆 13 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(7)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/CopaUEFA?$Desktop$&fit=wrap" alt="UEFA Cup">
+      <h3>UEFA Cup</h3>
+      <p>🏆 2 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(8)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/CopaLiga?$Desktop$&fit=wrap" alt="Copa de la Liga">
+      <h3>Copa de la Liga</h3>
+      <p>🏆 1 naslov</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(9)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/PequenaCopaMundo?$Desktop$&fit=wrap" alt="Small World Cup">
+      <h3>Small World Cup</h3>
+      <p>🏆 2 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(10)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/CopaLatina?$Desktop$&fit=wrap" alt="Latin Cup">
+      <h3>Latin Cup</h3>
+      <p>🏆 2 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(11)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/CopaIberoamericana?$Desktop$&fit=wrap" alt="Ibero-American Cup">
+      <h3>Ibero-American Cup</h3>
+      <p>🏆 1 naslov</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(12)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/CampeonatosRegionales?$Desktop$&fit=wrap" alt="Regional Championship">
+      <h3>Regional Championship</h3>
+      <p>🏆 18 naslova</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(13)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/TrofeoMancomunado?$Desktop$&fit=wrap" alt="Mancomunados Trophy">
+      <h3>Mancomunados Trophy</h3>
+      <p>🏆 1 naslov</p>
+    </div>
+
+    <div class="trophy card-click" onclick="openTrophy(14)">
+      <img src="https://assets.realmadrid.com/is/image/realmadrid/mejor-club-del-siglo-xx?$Desktop$&fit=wrap" alt="Best Club 20th Century">
+      <h3>Best Club 20th Century</h3>
+      <p>🏅 FIFA nagrada 2000.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Real Madrid Fan Projekt | Napravio: Dario Pavljasevic</p>
+</footer>
+
+<!-- MODALI -->
+<div id="loginModal" class="modal">
+  <div class="modal-content modal-small">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2 class="modal-title">🔐 Login</h2>
+    <form onsubmit="loginSubmit(event)">
+      <input class="form-field" type="text" name="username" placeholder="Username" required>
+      <input class="form-field" type="password" name="password" placeholder="Password" required>
+      <button class="btn" type="submit" style="width:100%;margin-top:12px;">Prijavi se</button>
+      <div id="loginMsg" class="message"></div>
+    </form>
+  </div>
+</div>
+<div id="registerModal" class="modal">
+  <div class="modal-content modal-small">
+    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+    <h2 class="modal-title">📝 Registracija</h2>
+    <form onsubmit="registerSubmit(event)">
+      <input class="form-field" type="text" name="username" placeholder="Username" minlength="3" required>
+      <p class="form-hint">Minimalno 3 znaka</p>
+      <input class="form-field" type="password" name="password" placeholder="Password" minlength="4" required>
+      <p class="form-hint">Minimalno 4 znaka</p>
+      <button class="btn" type="submit" style="width:100%;margin-top:12px;">Registruj se</button>
+      <div id="registerMsg" class="message"></div>
+    </form>
+  </div>
+</div>
+<div id="playerModal" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('playerModal')">&times;</span><div id="playerModalBody"></div></div></div>
+<div id="trophyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('trophyModal')">&times;</span>
+    <div id="trophyModalBody"></div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+</body>
+</html>
